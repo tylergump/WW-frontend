@@ -44,11 +44,22 @@ form {
 select {
   max-width: 200px;
   text-align: right;
-  border: solid red
+  
 }
 
 #UserForm {
   font-size: 30px;
+}
+
+table {
+  display: inline-block;
+  text-align: center;
+  width: 625px;
+  
+}
+
+td {
+  width: 600px
 }
 
 

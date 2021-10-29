@@ -18,6 +18,7 @@ export default function Header() {
                 <li><Link to='/login'> Login</Link></li>
                 <li><Link to='/register'> Register</Link></li>
                 <li><Link to='/account'> Account</Link></li>
+                <li><Link to ="/matches">Matches</Link></li>
               </ul>
               </div>
             </nav>
