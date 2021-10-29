@@ -16,12 +16,12 @@ export default class PrefForm extends Component {
       super(props)
 
       this.state = {
-          type:'dog',
-          age:'baby',
-          gender:'male',
-          size:'large',
+          type:'',
+          age:'',
+          gender:'',
+          size:'',
           animals: [
-            {animals:  [{name: "Henry", age: "Baby",},{name: "Buddy", age: "Baby"}]
+            {animals:  []
           
       }],
           isLoaded: false
@@ -111,8 +111,9 @@ render() {
                   id='type'
                   onChange= {this.handleChange}
                   >
-                      <option value="Dog">Dog</option>
-                      <option value="Cat">Cat</option>
+                    <option value=""></option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
                   </select>
               </div>
               <div>
@@ -124,10 +125,11 @@ render() {
                   id='age'
                   onChange= {this.handleChange}
                   >
-                      <option value="Baby">Baby</option>
-                      <option value="Young">Young</option>
-                      <option value="Adult">Adult</option>
-                      <option value="Senior">Senior</option>
+                    <option value=""></option>
+                    <option value="Baby">Baby</option>
+                    <option value="Young">Young</option>
+                    <option value="Adult">Adult</option>
+                    <option value="Senior">Senior</option>
                   </select>
               </div>
               <div>
@@ -139,8 +141,9 @@ render() {
                   id='gender'
                   onChange= {this.handleChange}
                   >
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option> 
+                    <option value=""></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option> 
                   </select>
               </div>
               <div>
@@ -152,10 +155,11 @@ render() {
                   id='size'
                   onChange= {this.handleChange}
                   >
-                      <option value="small">Small</option>
-                      <option value="medium">Medium</option>
-                      <option value="large">Large</option>
-                      <option value="xlarge">Extra Large</option>
+                    <option value=""></option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">Extra Large</option>
                   </select>
               </div>
               <div>
