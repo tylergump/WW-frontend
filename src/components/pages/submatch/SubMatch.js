@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-bootstrap/Carousel'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import camera from './camera_shy.png'
 // import PrefForm from './PrefForm';
 const key = 'Y839YgEBrBaQwAPENPuEHuaFHLfpoTbXdSdrcjanIIEcf2fCPk'
@@ -29,17 +29,20 @@ render () {
   
             <div className="App">
               <h2>Do we have a match for you!</h2>
-              <Carousel id="carousel">
+              <Carousel>
+
               {this.props.animals.animals.map(animal =>(
-                
+                <Carousel.Item>
                 <div> 
                 <img id="matches" src={animal.primary_photo_cropped ? animal.primary_photo_cropped.small : camera} alt="Camera Shy"></img>
+                <Carousel.Caption>
                 <a href={animal.url}><h1 key={animal.name}>{animal.name}</h1></a>
                 <h2>{animal.age}</h2>
-                
+                </Carousel.Caption>
                 </div>
-                
+                </Carousel.Item>
               ))}
+
               </Carousel>
             </div>
 
