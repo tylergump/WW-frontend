@@ -29,15 +29,12 @@ const ConnectedUserDisplay = ({ username, password, email, zipcode}) => (
           <td><strong>Zipcode:</strong> {zipcode}</td>
         </tr>
         </tbody>
-      </table>
+      </table> <br/>
+      <button class="btn">Edit</button>
+      <button class="btn">Delete</button>
   </div>
 )
 
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     updateUser: user => dispatch(updateUser(user))
-//   }
-// }
 
 
 const UserDisplay = connect(mapStateToProps)(ConnectedUserDisplay)
