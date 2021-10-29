@@ -29,7 +29,7 @@ render () {
   
             <div className="App">
               <h2>Do we have a match for you!</h2>
-              <Carousel>
+              <Carousel interval={null}>
 
               {this.props.animals.animals.map(animal =>(
                 <Carousel.Item>
