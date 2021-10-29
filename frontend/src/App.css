@@ -1,0 +1,150 @@
+.App {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Comfortaa', cursive;
+  color: #2f496e;
+}
+
+h3 {
+  font-family: 'Comfortaa', cursive;
+  color: #fbfcf4;
+}
+
+#home {
+  width: 100vw;
+}
+
+#matches {
+  width: 600px;
+  height: 600px;
+  border-width: 10px;
+  border: solid black
+}
+
+form {
+ 
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#petformlabel {
+  border: solid black;
+  width: 30px;
+  text-align: left;
+}
+
+select {
+  max-width: 200px;
+  text-align: right;
+  border: solid red
+}
+
+#UserForm {
+  font-size: 30px;
+}
+
+
+input[type=submit] {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fbfcf4;
+  background-color: #fa8d62;
+  border: none;
+  min-width: 85px;
+  height: 30px;
+  border-radius: 13px;
+  margin: 15px;
+  cursor: pointer;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #f37847;
+}
+
+li {
+  display:inline-block;
+}
+
+li>a {
+  font-family: 'Quicksand', sans-serif;
+  color: #fbfcf4;
+  font-size: 16px;
+  font-weight: 300;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+li>a:hover {
+  background-color: #90a84d;
+}
+
+ul {
+  list-style: none;
+  margin: 15px 0 0 0;
+}
+
+.btn {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fbfcf4;
+  background-color: #fa8d62;
+  border: none;
+  min-width: 85px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 15px;
+  cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #f37847;
+  }
+
+.footer {
+  text-align: left;
+  background-color: #a5c05b;
+  color: #fbfcf4;
+  height: 5vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 13px;
+}
+
+.footer-content {
+  margin-left: 10px;
+}
+
+.logo-container {
+  margin-left: 10px;
+  max-height: 8vh;
+  padding: 3px;
+}
+
+.header-logo {
+  max-height: 7.5vh;
+}
+
+.nav {
+  background-color: #a5c05b;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pet-carousel {
+  margin-bottom: 10%;
+
+}

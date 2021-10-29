@@ -1,0 +1,2 @@
+export const ADD_PREFERENCE = "ADD_PREFERENCE"
+export const UPDATE_USER = "UPDATE_USER"
