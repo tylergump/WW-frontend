@@ -49,7 +49,7 @@ const mapStateToProps = state => {
 
  const ConnectedUserDisplay = ({ username, password, email, zipcode}) => (
   <div id="account">
-      <h2>Welcome, {username}</h2> 
+      <h1 className="mt-4">Welcome, {username}</h1> 
       <table>
       <tbody>
         <tr>

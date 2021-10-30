@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <main>
          <div>
-           <h1>Wags & Whiskers</h1>
+           <h1 className="mt-4">Wags & Whiskers</h1>
            <HomeBtns />
            <p>Let us help you find the perfect pet addition for your family. Wags & Whiskers will search near and far to match you with the ideal adoptable pet. </p>
          </div>

@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 
 const userDisplay = ({ username, preferences }) => (
     <div>
-        <h2>Welcome, {username}!</h2> 
+        <h1 className="mt-4">Welcome, {username}!</h1> 
     </div>
 )
 

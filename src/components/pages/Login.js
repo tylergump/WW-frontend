@@ -85,8 +85,8 @@ class ConnectedLogin extends Component {
         }
         return (
             <React.Fragment>
-            <strong id="UserForm">Login </strong> <br/>
-             <form onSubmit={this.loginUser}>
+            <h1 className="mt-4">Login </h1>
+             <form onSubmit={this.loginUser} className="mt-2">
                 <label htmlFor="name">Username: </label>
                 <input type="text" id="name" name="username"/> <br/>
                 <label htmlFor="name">Password: </label>

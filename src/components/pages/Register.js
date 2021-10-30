@@ -62,8 +62,8 @@ export default class Register extends Component {
       }
         return (
             <React.Fragment>
-             <strong id="UserForm">Create Account</strong><br/>
-              <form onSubmit={this.onSubmit}>
+             <h1 className="mt-4">Create Account</h1>
+              <form onSubmit={this.onSubmit} className="mt-2">
                   <label htmlFor="name">Username: </label> 
                   <input type="text" id="name" name="username"/>
                   <br/>

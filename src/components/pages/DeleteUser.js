@@ -40,7 +40,7 @@ export default class ConnectedDeleteUser extends Component {
     // return this.state.usersData.map((user) => {
         return (
         <div>
-        <h1>Do you want to delete your account?</h1>
+        <h1 className="mt-4">Do you want to delete your account?</h1>
           {/* <button class="btn" onClick={() => { this.handleClick(user._id) }} className="delete-btn">Yes</button> */}
           <button class="btn">Yes</button>
           <button class="btn">
