@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Match from './submatch/SubMatch'
+import bootstrap from 'bootstrap'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Greeting from '../imports/Greeting';
@@ -103,7 +104,7 @@ render() {
           <Greeting />
           <form onSubmit={this.handleSubmit}>
               <div>
-                  <label>Type</label>
+                  <label>Type: </label>
                   <select 
                   type='text'
                   name='type'
@@ -117,7 +118,7 @@ render() {
                   </select>
               </div>
               <div>
-                  <label>Age</label>
+                  <label>Age: </label>
                   <select 
                   type='text'
                   name='age'
@@ -133,7 +134,7 @@ render() {
                   </select>
               </div>
               <div>
-                  <label>Gender</label>
+                  <label>Gender: </label>
                   <select 
                   type='text'
                   name='gender'
@@ -147,7 +148,7 @@ render() {
                   </select>
               </div>
               <div>
-                  <label>Size</label>
+                  <label>Size: </label>
                   <select 
                   type='text'
                   name='size'
