@@ -28,7 +28,7 @@ export default class Register extends Component {
 
     register = async (e) => {
       console.log('state at line 29', this.state)
-        const url = process.env.REACT_APP_BASE_URL+'/users/signup/'
+        const url = process.env.REACT_APP_BASE_URL+'users/signup/'
         console.log(url)
         try {
           console.log("this is after try")
