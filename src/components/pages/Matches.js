@@ -11,8 +11,8 @@ export default class PrefForm extends Component {
   constructor(props) {
       super(props)
 
-      this.state = {
-          type:'dog&cat',
+      this.state = {                  //SEARCH PARAMETERS
+          type:'',                    //Start off 
           age:'',
           gender:'',
           size:'',
@@ -30,13 +30,13 @@ export default class PrefForm extends Component {
   }
 
 
-  handleChange = (e) => {
+  handleChange = (e) => {                                 // SELECT MENUS
     this.setState({
         [e.target.name]: e.target.value
     })
   }
 
-  onChange = (e) => {
+  onChange = (e) => {                                     // CHECKBOXES
     this.setState({[e.target.name] : e.target.checked})
   }
 
