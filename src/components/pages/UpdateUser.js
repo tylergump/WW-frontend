@@ -1,6 +1,7 @@
 import React from "react"
 import { Redirect } from "react-router-dom"
 import {connect} from "react-redux"
+import { Link } from 'react-router-dom'
 
 
 const mapStateToProps = state => {
@@ -31,7 +32,9 @@ const ConnectedUserDisplay = ({ username, password, email, zipcode}) => (
         </tr>
         </tbody>
       </table> <br/>
-      <button class="btn">Edit</button>
+      <button class="btn">
+        <Link to="/edit">Edit</Link>
+      </button>
       <button class="btn">Delete</button>
   </div>
 )

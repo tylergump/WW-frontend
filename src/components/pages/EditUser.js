@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom"
 import { connect } from "react-redux"
 import { updateUser } from "../store/actions"
 
+
 function mapDispatchToProps(dispatch) {
     return {
       updateUser: user => dispatch(updateUser(user))
@@ -14,6 +15,7 @@ function mapDispatchToProps(dispatch) {
         super(props)
 
         this.state = {
+            
             username: "",
             password: "",
             email: "",
@@ -23,26 +25,53 @@ function mapDispatchToProps(dispatch) {
         }
     }
 
-    getUserById = (id) => {
-        fetch(this.props.baseURL + '/users/' + id,  {
-          credentials: 'include'
-        })
-        .then(response => {
-          const user = this.state.users.find(users => users._id === id)
-          if (response.status === 200) {
-            console.log(response)
-            return user
-          } else {
-            return []
+       getUser = async (e) => {
+            e.preventDefault()
+            const url = process.env.REACT_APP_BASE_URL+'/users/update/'
+            console.log(url)
+            const updateUser = {
+              username: e.target.username.value,
+              password: e.target.password.value,
+              email: e.target.email.value,
+              zipcode: e.target.email.value,
+            }
+            console.log("before try")
+            try {
+        
+              const response = await fetch(url, {
+                method: 'GET',
+                body: JSON.stringify(updateUser),
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                credentials: "include"
+              })
+        
+              console.log(response)
+              console.log("BODY: ",response.body)
+        
+              const responseJson = await response.json()
+              console.log(responseJson)
+    
+              if (response.status === 200) {
+                console.log("got user")
+                await this.setState({
+                  id: responseJson._id,
+                  username: responseJson.username,
+                  // we don't want to store the password
+                  email: responseJson.email,
+                  zipcode: responseJson.zipcode,
+                  authenticated: true,
+                  redirect: "/matches"
+                  })
+                  this.props.updateUser(this.state)
+              } console.log(this.state)
+            }
+            catch (err) {
+              console.log('Error => ', err);
+            }
           }
-          }) 
-        .then(data => {
-          console.log(data)
-          this.setState({
-            users: data
-          })
-        })
-      }
+          
 
     onSubmit = async (e) => {
       e.preventDefault()
@@ -76,7 +105,7 @@ function mapDispatchToProps(dispatch) {
             }
           })
           console.log("line 36")
-          if (response.status === 201) {
+          if (response.status === 200) {
             console.log("this is my response on 37", response)
             this.setState({ redirect: "/account"})
           }
@@ -96,7 +125,7 @@ function mapDispatchToProps(dispatch) {
              <strong id="UserForm">Edit Account</strong><br/>
               <form onSubmit={this.onSubmit}>
                   <label htmlFor="name">Username: </label> 
-                  <input type="text" id="name" name="username"/>
+                  <input type="text" id="name" name="username" />
                   <br/>
                   <label htmlFor="name">Password: </label>
                   <input type="password" id="password" name="password"/>
