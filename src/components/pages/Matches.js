@@ -115,71 +115,73 @@ render() {
       <div>
           <Greeting />
           
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} className="mt-2">
             <div className="container">
-                <div>
-                <label>Type</label>
-                  <select className="select"
-                  type='text'
-                  name='type'
-                  value={type}
-                  id='type'
-                  onChange= {this.handleChange}
-                  >
-                    <option value="">Surprise Me</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                  </select>
-                    </div>
 
-                    <div>
-                <label>Age</label>
-                  <select className="select"
-                  type='text'
-                  name='age'
-                  value={age}
-                  id='age'
-                  onChange= {this.handleChange}
-                  >
-                    <option value="">Any</option>
-                    <option value="baby">Baby</option>
-                    <option value="young">Young</option>
-                    <option value="adult">Adult</option>
-                    <option value="senior">Senior</option>
-                  </select>
+                <div>
+                  <label htmlFor="type">Type</label>
+                    <select className="select p-1 select-width"
+                    type='text'
+                    name='type'
+                    value={type}
+                    id='type'
+                    onChange= {this.handleChange}
+                    >
+                      <option value="">Surprise Me</option>
+                      <option value="dog">Dog</option>
+                      <option value="cat">Cat</option>
+                    </select>
+                  </div>
+
+                <div>
+                  <label htmlFor="age">Age</label>
+                    <select className="select p-1"
+                    type='text'
+                    name='age'
+                    value={age}
+                    id='age'
+                    onChange= {this.handleChange}
+                    >
+                      <option value="">Any</option>
+                      <option value="baby">Baby</option>
+                      <option value="young">Young</option>
+                      <option value="adult">Adult</option>
+                      <option value="senior">Senior</option>
+                    </select>
                 </div>
 
                 <div>
-                <label>Gender</label>
-                <select className="select"
-                  type='text'
-                  name='gender'
-                  value={gender}
-                  id='gender'
-                  onChange= {this.handleChange}
-                  >
-                    <option value="">Either</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option> 
-                  </select>
+                  <label htmlFor="gender">Gender</label>
+                  <select className="select p-1"
+                    type='text'
+                    name='gender'
+                    value={gender}
+                    id='gender'
+                    onChange= {this.handleChange}
+                    >
+                      <option value="">Either</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option> 
+                    </select>
                   </div>
 
-                  <div>
-                <label>Size</label>
-                  <select className="select"
-                  type='text'
-                  name='size'
-                  value={size}
-                  id='size'
-                  onChange= {this.handleChange}
-                  >
-                    <option value="">Any</option>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                    <option value="xlarge">Extra Large</option>
-                  </select>
+                <div>
+                  <label htmlFor="size">Size</label>
+                    <select className="select p-1"
+                    type='text'
+                    name='size'
+                    value={size}
+                    id='size'
+                    onChange= {this.handleChange}
+                    >
+                      <option value="">Any</option>
+                      <option value="small">Small</option>
+                      <option value="medium">Medium</option>
+                      <option value="large">Large</option>
+                      <option value="xlarge">Extra Large</option>
+                    </select>
                   </div>
+
                   </div>
                   <div className="checks-container left-align-text">
                     <div className="form-check my-2">

@@ -16,6 +16,10 @@ h3 {
   color: #fbfcf4;
 }
 
+select{
+  width: 8em !important;
+}
+
 #home {
   width: 100vw;
 }
