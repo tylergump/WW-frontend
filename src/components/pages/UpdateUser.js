@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, {Component} from "react"
 import { Redirect } from "react-router-dom"
-=======
-import React from "react"
->>>>>>> 276acbe (EditUser pulls default data from current user to update)
 import {connect} from "react-redux"
 import { Link } from 'react-router-dom'
 
@@ -17,7 +13,6 @@ const mapStateToProps = state => {
   }
 }
 
-<<<<<<< HEAD
 
 
 ///This is the holiday code ///
@@ -53,9 +48,6 @@ const mapStateToProps = state => {
 
 
  const ConnectedUserDisplay = ({ username, password, email, zipcode}) => (
-=======
-const ConnectedUserDisplay = ({ username, email, zipcode}) => (
->>>>>>> 276acbe (EditUser pulls default data from current user to update)
   <div id="account">
       <h2>Welcome, {username}</h2> 
       <table>
@@ -77,13 +69,9 @@ const ConnectedUserDisplay = ({ username, email, zipcode}) => (
       <button className="btn">
         <Link to="/edit">Edit</Link>
       </button>
-<<<<<<< HEAD
-      <button class="btn">
+      <button className="btn">
       <Link to="/Delete">Delete</Link>
       </button>
-=======
-      <button className="btn">Delete</button>
->>>>>>> 89361aa (resolved merge conflict)
   </div>
 )
  
