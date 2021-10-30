@@ -136,8 +136,8 @@ function mapDispatchToProps(dispatch) {
      
         return (
             <React.Fragment>
-             <strong id="UserForm">Edit Account</strong><br/>
-              <form onSubmit={this.onSubmit}>
+             <h1 className="mt-4">Edit Account</h1><br/>
+              <form onSubmit={this.onSubmit} className="mt-1">
                   <label htmlFor="name">Username: </label> 
                   <input type="text" id="name" name="username"  value={this.state.username} onChange={(value) => this.onChange(value)}/>
                   <br/>
