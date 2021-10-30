@@ -1,14 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import Match from './submatch/SubMatch'
-import bootstrap from 'bootstrap'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import Greeting from '../imports/Greeting';
 const key = 'Y839YgEBrBaQwAPENPuEHuaFHLfpoTbXdSdrcjanIIEcf2fCPk'
 const secret = 'DBhH8WzYYgB3UYLiUjfaG03DCh8KvyCTPa22Hcrl'
-
-
-
 
 
 export default class PrefForm extends Component {
@@ -171,7 +166,7 @@ render() {
                   </div>
                   </div>
               <div>
-                  <button class="btn" type='submit'>Submit</button>
+                  <button className="btn" type='submit'>Submit</button>
                 </div>
                 
             </form>

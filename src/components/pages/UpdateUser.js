@@ -67,12 +67,16 @@ const mapStateToProps = state => {
         </tr>
         </tbody>
       </table> <br/>
-      <button class="btn">
+      <button className="btn">
         <Link to="/edit">Edit</Link>
       </button>
+<<<<<<< HEAD
       <button class="btn">
       <Link to="/Delete">Delete</Link>
       </button>
+=======
+      <button className="btn">Delete</button>
+>>>>>>> 89361aa (resolved merge conflict)
   </div>
 )
  

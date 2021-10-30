@@ -94,7 +94,7 @@ render() {
 
     const {type, age, gender, size} = this.state
     return (
-        <div class="search">
+        <div className="search">
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <label id="petformlabel">Type </label>
@@ -153,7 +153,7 @@ render() {
                     </select>
                 </div> <br/>
                 <div>
-                    <button class="btn" type='submit'>Search</button>
+                    <button className="btn" type='submit'>Search</button>
                 </div>
             </form>
         </div>
