@@ -4,6 +4,7 @@ const initialState = {
     username: "Human",
     email: "human@notalien.com",
     zipcode: 43271,
+    authenticated: false,
     preferences: [{type: "Dog", age: "Baby"}]
 }
 
@@ -18,9 +19,11 @@ export function rootReducer(state=initialState, action) {
             case actionType.UPDATE_USER: 
             return {
             ...state,
+            id: payload._id,
             username: payload.username,
             email: payload.email,
             zipcode: payload.zipcode,
+            authenticated: payload.authenticated,
             preferences: [...state.preferences, payload.preferences]
             
         }

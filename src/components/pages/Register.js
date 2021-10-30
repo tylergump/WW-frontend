@@ -1,15 +1,8 @@
 import React, {Component} from "react"
 import { Redirect } from "react-router-dom"
-import { connect } from "react-redux"
-import { updateUser } from "../store/actions"
 
-function mapDispatchToProps(dispatch) {
-  return {
-    updateUser: user => dispatch(updateUser(user))
-  }
-}
 
-class ConnectedRegister extends Component {
+export default class Register extends Component {
     constructor (props) {
         super(props)
 
@@ -29,7 +22,6 @@ class ConnectedRegister extends Component {
         email: e.target.email.value,
         zipcode: e.target.zipcode.value
       }) 
-        this.props.updateUser(this.state)
        this.register(e)
        console.log('state at line 25', this.state)
     }
@@ -55,7 +47,7 @@ class ConnectedRegister extends Component {
           console.log("line 36")
           if (response.status === 201) {
             console.log("this is my response on 37", response)
-            this.setState({ redirect: "/matches"})
+            this.setState({ redirect: "/login"})
           }
         }
         catch (err) {
@@ -94,6 +86,3 @@ class ConnectedRegister extends Component {
         )
     }
 }
-
-const Register = connect(null, mapDispatchToProps)(ConnectedRegister)
-export default Register

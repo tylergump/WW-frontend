@@ -53,10 +53,12 @@ class ConnectedLogin extends Component {
           if (response.status === 200) {
             console.log("user signed in")
             await this.setState({
-              username:responseJson.username,
+              id: responseJson._id,
+              username: responseJson.username,
               // we don't want to store the password
               email: responseJson.email,
               zipcode: responseJson.zipcode,
+              authenticated: true,
               redirect: "/matches"
               })
               this.props.updateUser(this.state)
