@@ -167,15 +167,26 @@ ul {
   background-color:  #f37847;
 }
 
-/* .carousel-control-next-icon:after
+.carousel-control-next-icon:after
 {
   content: '>';
   font-size: 55px;
-  color: red;
+
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
   font-size: 55px;
-  color: red;
-} */
+}
+
+.select {
+  margin: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+
+}

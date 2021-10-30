@@ -98,14 +98,17 @@ render() {
   const {type, age, gender, size} = this.state
   let {isLoaded, animals} = this.state
   console.log(this.state)
-  
+
+
   return (
       <div>
           <Greeting />
+          
           <form onSubmit={this.handleSubmit}>
-              <div>
-                  <label>Type: </label>
-                  <select 
+            <div className="container">
+                <div>
+                <label>Type</label>
+                  <select className="select"
                   type='text'
                   name='type'
                   value={type}
@@ -116,10 +119,11 @@ render() {
                     <option value="Dog">Dog</option>
                     <option value="Cat">Cat</option>
                   </select>
-              </div>
-              <div>
-                  <label>Age: </label>
-                  <select 
+                    </div>
+
+                    <div>
+                <label>Age</label>
+                  <select className="select"
                   type='text'
                   name='age'
                   value={age}
@@ -132,10 +136,11 @@ render() {
                     <option value="Adult">Adult</option>
                     <option value="Senior">Senior</option>
                   </select>
-              </div>
-              <div>
-                  <label>Gender: </label>
-                  <select 
+                </div>
+
+                <div>
+                <label>Gender</label>
+                <select className="select"
                   type='text'
                   name='gender'
                   value={gender}
@@ -146,10 +151,11 @@ render() {
                     <option value="Male">Male</option>
                     <option value="Female">Female</option> 
                   </select>
-              </div>
-              <div>
-                  <label>Size: </label>
-                  <select 
+                  </div>
+
+                  <div>
+                <label>Size</label>
+                  <select className="select"
                   type='text'
                   name='size'
                   value={size}
@@ -162,7 +168,8 @@ render() {
                     <option value="large">Large</option>
                     <option value="xlarge">Extra Large</option>
                   </select>
-              </div>
+                  </div>
+                  </div>
               <div>
                   <button class="btn" type='submit'>Submit</button>
                 </div>
@@ -170,8 +177,7 @@ render() {
             </form>
             <Match animals = {animals}></Match>
 
-        <div>
-        </div>
+
 
         </div>
     )
