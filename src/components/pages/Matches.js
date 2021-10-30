@@ -17,7 +17,7 @@ export default class PrefForm extends Component {
       super(props)
 
       this.state = {
-          type:'',
+          type:'dog&cat',
           age:'',
           gender:'',
           size:'',
@@ -62,7 +62,7 @@ export default class PrefForm extends Component {
       
           // Return a second API call
           // This one uses the token we received for authentication
-          return fetch(`https://api.petfinder.com/v2/animals?type=${type.value}&age=${age.value}&gender=${gender.value}&size${size}`, {
+          return fetch(`https://api.petfinder.com/v2/animals?types=${type.value}&age=${age.value}&gender=${gender.value}&size${size}`, {
               headers: {
                   'Authorization': data.token_type + ' ' + data.access_token,
                   'Content-Type': 'application/x-www-form-urlencoded'
@@ -112,7 +112,7 @@ render() {
                   id='type'
                   onChange= {this.handleChange}
                   >
-                    <option value="">Either</option>
+                    <option value="Dog&Cat">Either</option>
                     <option value="Dog">Dog</option>
                     <option value="Cat">Cat</option>
                   </select>
