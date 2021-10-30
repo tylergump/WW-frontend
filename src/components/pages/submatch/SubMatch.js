@@ -30,7 +30,7 @@ render () {
                 <div> 
                 <img id="matches" src={animal.primary_photo_cropped ? `https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/${animal.id}/1/?bust=1546042081&width=600` : camera} alt="Camera Shy"></img>
                 <Carousel.Caption className="caption">
-                <a href={animal.url}><h1 id="name" key={animal.name}>{animal.name}</h1>
+                <a href={animal.url}><h1 id="petname" key={animal.name}>{animal.name}</h1>
                 <h2>{animal.age}</h2></a>
                 </Carousel.Caption>
                 </div>
