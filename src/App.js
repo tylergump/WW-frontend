@@ -9,6 +9,7 @@ import Login from './components/pages/Login'
 import Register from './components/pages/Register'
 import Matches from './components/pages/Matches'
 import UpdateUser from './components/pages/UpdateUser'
+import EditUser from './components/pages/EditUser'
 
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 
@@ -27,6 +28,7 @@ render () {
                 <Route path='/register' component={Register}></Route>
                 <Route path='/matches' component={Matches}></Route>
                 <Route path='/account' component={UpdateUser}></Route>
+                <Route path='/edit' component={EditUser}></Route>
               </Switch>
 
               <img id="home" src="https://parade.com/wp-content/uploads/2019/04/pet-quotes.jpg" alt=""></img>
