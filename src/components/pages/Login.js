@@ -91,7 +91,7 @@ class ConnectedLogin extends Component {
                 <input type="text" id="name" name="username"/> <br/>
                 <label htmlFor="name">Password: </label>
                 <input type="password" id="password" name="password"/> <br/>
-                <input type="submit" value="Login" />
+                <input type="submit" value="Login"/>
             </form>
             </React.Fragment>
         )

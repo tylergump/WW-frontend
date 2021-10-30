@@ -70,14 +70,14 @@ td {
 
 input[type=submit] {
   font-family: 'Quicksand', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #fbfcf4;
   background-color: #fa8d62;
   border: none;
   min-width: 85px;
-  height: 30px;
-  border-radius: 13px;
+  height: 40px;
+  border-radius: 15px;
   margin: 15px;
   cursor: pointer;
   
@@ -125,6 +125,11 @@ ul {
   
   .btn:hover {
     background-color: #f37847;
+    color:#fbfcf4;
+  }
+
+  .btn>a {
+    color: #fbfcf4;
   }
 
 .footer {
