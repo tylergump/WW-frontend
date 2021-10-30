@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/imports/Header'
 import Footer from './components/imports/Footer'
