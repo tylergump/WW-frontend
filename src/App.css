@@ -190,3 +190,30 @@ ul {
   justify-content: space-around;
 
 }
+
+/* .caption {
+  font-family: 'Comfortaa', cursive;
+color: black;
+font-weight: 900;
+} */
+
+.caption:hover {
+color: #90a84d;
+}
+
+/* .caption {
+  font-family: 'Comfortaa', cursive;
+  color: black;
+  font-size: 48px;
+}
+#name{
+  font-family: 'Comfortaa', cursive;
+  color: black;
+  font-size: 48px;
+} */
+
+.carousel-caption {
+  position: relative;
+  left: 0;
+  top: 0;
+}
