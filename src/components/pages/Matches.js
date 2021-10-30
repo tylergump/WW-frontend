@@ -73,7 +73,7 @@ export default class PrefForm extends Component {
       
           // Return a second API call
           // This one uses the token we received for authentication
-          return fetch(`https://api.petfinder.com/v2/animals?types=${type.value}&age=${age.value}&gender=${gender.value}&size=${size.value}&good_with_children=${children}&good_with_dogs=${dogs}&good_with_cats=${cats}&house_trained=${housetrained}&special_needs=${needs}&limit=40`, {
+          return fetch(`https://api.petfinder.com/v2/animals?type/${type.value}&age=${age.value}&gender=${gender.value}&size=${size.value}&good_with_children=${children}&good_with_dogs=${dogs}&good_with_cats=${cats}&house_trained=${housetrained}&special_needs=${needs}&limit=40`, {
               headers: {
                   'Authorization': data.token_type + ' ' + data.access_token,
                   'Content-Type': 'application/x-www-form-urlencoded'
@@ -126,9 +126,9 @@ render() {
                   id='type'
                   onChange= {this.handleChange}
                   >
-                    <option value="Dog&Cat">Either</option>
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
+                    <option value="">Surprise Me</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
                   </select>
                     </div>
 
@@ -142,10 +142,10 @@ render() {
                   onChange= {this.handleChange}
                   >
                     <option value="">Any</option>
-                    <option value="Baby">Baby</option>
-                    <option value="Young">Young</option>
-                    <option value="Adult">Adult</option>
-                    <option value="Senior">Senior</option>
+                    <option value="baby">Baby</option>
+                    <option value="young">Young</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
                   </select>
                 </div>
 
@@ -159,8 +159,8 @@ render() {
                   onChange= {this.handleChange}
                   >
                     <option value="">Either</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option> 
+                    <option value="male">Male</option>
+                    <option value="female">Female</option> 
                   </select>
                   </div>
 

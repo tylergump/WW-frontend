@@ -9,13 +9,7 @@ const age = 'Baby'
 const status = 'adoptable'
 
 export default class Matches extends Component {
-//     constructor(props) {
-//         super(props)
-  
-//         this.state = {
-//             animals: [{}]
-//     }
-// }
+
 
 render () {
       
@@ -34,9 +28,9 @@ render () {
               {this.props.animals.animals.map(animal =>(
                 <Carousel.Item>
                 <div> 
-                <img id="matches" src={animal.primary_photo_cropped ? animal.primary_photo_cropped.small : camera} alt="Camera Shy"></img>
+                <img id="matches" src={animal.primary_photo_cropped ? `https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/${animal.id}/1/?bust=1546042081&width=600` : camera} alt="Camera Shy"></img>
                 <Carousel.Caption className="caption">
-                <a href={animal.url}><h1 id="petname" key={animal.name}>{animal.name}</h1>
+                <a href={animal.url}><h1 id="name" key={animal.name}>{animal.name}</h1>
                 <h2>{animal.age}</h2></a>
                 </Carousel.Caption>
                 </div>

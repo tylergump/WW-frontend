@@ -22,7 +22,7 @@ h3 {
 
 #matches {
   width: 600px;
-  height: 600px;
+  height: 500px;
   border-width: 10px;
   border: solid black;
   /* opacity: 0.8; */
@@ -182,8 +182,9 @@ ul {
 
 .select {
   margin: 10px;
-  width: 100px;
+  width: 110px;
   text-align: center;
+
 }
 
 .container {
