@@ -70,7 +70,7 @@ const mapStateToProps = state => {
         <Link to="/edit">Edit</Link>
       </button>
       <button className="btn">
-      <Link to="/Delete">Delete</Link>
+      <Link to="/delete">Delete</Link>
       </button>
   </div>
 )

@@ -86,7 +86,8 @@ function mapDispatchToProps(dispatch) {
         username: e.target.username.value,
         password: e.target.password.value,
         email: e.target.email.value,
-        zipcode: e.target.zipcode.value
+        zipcode: e.target.zipcode.value,
+        redirect: "/account"
       }) 
         this.props.updateUser(this.state)
        this.update(e)
