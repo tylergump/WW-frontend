@@ -143,6 +143,9 @@ ul {
   max-height: 8vh;
   padding: 3px;
 }
+.left-align-text {
+text-align: left;
+}
 
 .header-logo {
   max-height: 7.5vh;

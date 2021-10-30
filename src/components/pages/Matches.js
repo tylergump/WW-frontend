@@ -181,46 +181,68 @@ render() {
                   </select>
                   </div>
                   </div>
-                  <label>Good with Children
-                  <input
-                  type="checkbox"
-                  checked={good_with_children}
-                  onChange={this.onChange}
-                  name="good_with_children"
-                  />
-                  </label>
-                  <label>Good with Dogs
-                  <input
-                  type="checkbox"
-                  checked={good_with_dogs}
-                  onChange={this.onChange}
-                  name="good_with_dogs"
-                  />
-                  </label>
-                  <label>Good with Cats
-                  <input
-                  type="checkbox"
-                  checked={good_with_cats}
-                  onChange={this.onChange}
-                  name="good_with_cats"
-                  />
-                  </label>
-                  <label>House Trained
-                  <input
-                  type="checkbox"
-                  checked={house_trained}
-                  onChange={this.onChange}
-                  name="house_trained"
-                  />
-                  </label>
-                  <label>Has Special Needs
-                  <input
-                  type="checkbox"
-                  checked={special_needs}
-                  onChange={this.onChange}
-                  name="special_needs"
-                  />
-                  </label>
+                  <div className="checks-container left-align-text">
+                    <div className="form-check my-2">
+                      <input
+                      type="checkbox"
+                      checked={good_with_children}
+                      onChange={this.onChange}
+                      name="good_with_children"
+                      className="form-check-input"
+                      />
+                      <label htmlFor="good_with_children" className="form-check-label">Good with Children
+                      </label>
+                    </div>
+
+                    <div className="form-check my-2">
+                      <input
+                      type="checkbox"
+                      checked={good_with_dogs}
+                      onChange={this.onChange}
+                      name="good_with_dogs"
+                      className="form-check-input"
+                      />
+                      <label htmlFor="good_with_dogs" className="form-check-label">Good with Dogs
+                      </label>
+                    </div>
+                    
+                    <div className="form-check my-2">
+                      <input
+                      type="checkbox"
+                      checked={good_with_cats}
+                      onChange={this.onChange}
+                      name="good_with_cats"
+                      className="form-check-input"
+                      />
+                      <label htmlFor="good_with_cats" className="form-check-label">Good with Cats
+                      </label>
+                    </div>
+
+                    <div className="form-check my-2">
+                      <input
+                      type="checkbox"
+                      checked={house_trained}
+                      onChange={this.onChange}
+                      name="house_trained"
+                      className="form-check-input"
+                      />
+                      <label htmlFor="house_trained" className="form-check-label">House Trained
+                      </label>
+                    </div>
+
+                    <div className="form-check my-2">
+                      <input
+                      type="checkbox"
+                      checked={special_needs}
+                      onChange={this.onChange}
+                      name="special_needs"
+                      className="form-check-input"
+                      />
+                      <label htmlFor="special_needs" className="form-check-label">Has Special Needs
+                      </label>
+                    </div>
+                    </div>
+
               <div>
                   <button className="btn" type='submit'>Submit</button>
                 </div>
