@@ -16,11 +16,11 @@ export default class PrefForm extends Component {
           age:'',
           gender:'',
           size:'',
-          good_with_children:'',
-          good_with_dogs:'',
-          good_with_cats:'',
-          house_trained:'',
-          special_needs:'',
+          good_with_children: false,
+          good_with_dogs: false,
+          good_with_cats:false,
+          house_trained:false,
+          special_needs:false,
           animals: [
             {animals:  []
           
@@ -36,9 +36,20 @@ export default class PrefForm extends Component {
     })
   }
 
+  onChange = (e) => {
+    this.setState({[e.target.name] : e.target.checked})
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
     console.log(this.state)
+    console.log(this.state.good_with_children.toString())
+    let children = (this.state.good_with_children.toString())
+    let dogs = (this.state.good_with_dogs.toString())
+    let cats = (this.state.good_with_cats.toString())
+    let housetrained = (this.state.house_trained.toString())
+    let needs = (this.state.special_needs.toString())
+    console.log(dogs)
     let type = document.getElementById('type')
     let age = document.getElementById('age')
     let gender = document.getElementById('gender')
@@ -62,7 +73,7 @@ export default class PrefForm extends Component {
       
           // Return a second API call
           // This one uses the token we received for authentication
-          return fetch(`https://api.petfinder.com/v2/animals?types=${type.value}&age=${age.value}&gender=${gender.value}&size=${size.value}&limit=40`, {
+          return fetch(`https://api.petfinder.com/v2/animals?types=${type.value}&age=${age.value}&gender=${gender.value}&size=${size.value}&good_with_children=${children}&good_with_dogs=${dogs}&good_with_cats=${cats}&house_trained=${housetrained}&special_needs=${needs}&limit=40`, {
               headers: {
                   'Authorization': data.token_type + ' ' + data.access_token,
                   'Content-Type': 'application/x-www-form-urlencoded'
@@ -95,7 +106,7 @@ export default class PrefForm extends Component {
 render() {
 
 
-  const {type, age, gender, size} = this.state
+  const {type, age, gender, size, good_with_children, good_with_dogs, good_with_cats, house_trained, special_needs} = this.state
   let {isLoaded, animals} = this.state
   console.log(this.state)
 
@@ -170,6 +181,46 @@ render() {
                   </select>
                   </div>
                   </div>
+                  <label>Good with Children
+                  <input
+                  type="checkbox"
+                  checked={good_with_children}
+                  onChange={this.onChange}
+                  name="good_with_children"
+                  />
+                  </label>
+                  <label>Good with Dogs
+                  <input
+                  type="checkbox"
+                  checked={good_with_dogs}
+                  onChange={this.onChange}
+                  name="good_with_dogs"
+                  />
+                  </label>
+                  <label>Good with Cats
+                  <input
+                  type="checkbox"
+                  checked={good_with_cats}
+                  onChange={this.onChange}
+                  name="good_with_cats"
+                  />
+                  </label>
+                  <label>House Trained
+                  <input
+                  type="checkbox"
+                  checked={house_trained}
+                  onChange={this.onChange}
+                  name="house_trained"
+                  />
+                  </label>
+                  <label>Has Special Needs
+                  <input
+                  type="checkbox"
+                  checked={special_needs}
+                  onChange={this.onChange}
+                  name="special_needs"
+                  />
+                  </label>
               <div>
                   <button className="btn" type='submit'>Submit</button>
                 </div>

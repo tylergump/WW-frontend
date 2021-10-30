@@ -216,14 +216,14 @@ color: #f37847;
         0.05em -0.05em black,
         0.05em 0.05em black;
 }
-#name{
+#petname{
   color: white;
   font-family: 'Comfortaa', cursive;
   font-size: 48px;
   
 }
 
-#name:hover {
+#petname:hover {
   color: #90a84d;
   }
 

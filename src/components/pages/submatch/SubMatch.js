@@ -36,7 +36,7 @@ render () {
                 <div> 
                 <img id="matches" src={animal.primary_photo_cropped ? animal.primary_photo_cropped.small : camera} alt="Camera Shy"></img>
                 <Carousel.Caption className="caption">
-                <a href={animal.url}><h1 id="name" key={animal.name}>{animal.name}</h1>
+                <a href={animal.url}><h1 id="petname" key={animal.name}>{animal.name}</h1>
                 <h2>{animal.age}</h2></a>
                 </Carousel.Caption>
                 </div>
