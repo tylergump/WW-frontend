@@ -111,7 +111,7 @@ render() {
                   id='type'
                   onChange= {this.handleChange}
                   >
-                    <option value=""></option>
+                    <option value="">Either</option>
                     <option value="Dog">Dog</option>
                     <option value="Cat">Cat</option>
                   </select>
@@ -125,7 +125,7 @@ render() {
                   id='age'
                   onChange= {this.handleChange}
                   >
-                    <option value=""></option>
+                    <option value="">Any</option>
                     <option value="Baby">Baby</option>
                     <option value="Young">Young</option>
                     <option value="Adult">Adult</option>
@@ -141,7 +141,7 @@ render() {
                   id='gender'
                   onChange= {this.handleChange}
                   >
-                    <option value=""></option>
+                    <option value="">Either</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option> 
                   </select>
@@ -155,7 +155,7 @@ render() {
                   id='size'
                   onChange= {this.handleChange}
                   >
-                    <option value=""></option>
+                    <option value="">Any</option>
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
                     <option value="large">Large</option>
