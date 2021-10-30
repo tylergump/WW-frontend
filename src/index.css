@@ -5,6 +5,7 @@ html {
 
 body {
   margin: 0;
+  width: 100%;
   margin-bottom: 5vh; /* Margin bottom by footer height */
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;

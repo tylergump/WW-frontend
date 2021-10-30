@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100%;
 }
 
 a {
@@ -28,7 +29,6 @@ select{
   width: 600px;
   height: 500px;
   border-width: 10px;
-  border: solid black;
   /* opacity: 0.8; */
 }
 
@@ -41,7 +41,6 @@ form {
 }
 
 #petformlabel {
-  border: solid black;
   width: 30px;
   text-align: left;
 }
@@ -101,7 +100,7 @@ li>a {
 }
 
 li>a:hover {
-  background-color: #90a84d;
+  color: #b2dbd5;
 }
 
 ul {
@@ -155,6 +154,9 @@ ul {
 .left-align-text {
 text-align: left;
 }
+.light-text {
+  color: #fbfcf4;
+}
 
 .header-logo {
   max-height: 7.5vh;
@@ -170,26 +172,10 @@ text-align: left;
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  outline: black;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-  background-image: none;
-  background-color:  #f37847;
-}
+  height: 50px;
+  width: 50px;
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
 
-}
-
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
 }
 
 .select {
@@ -204,12 +190,22 @@ text-align: left;
   justify-content: space-around;
 
 }
+.carousel-container {
+  max-width: 100%;
+  background-color: #b2dbd5;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 5px -1px black;
+}
+.img-caption-container {
+  max-width: 600px;
+  margin: auto;
+}
 
-/* .caption {
-  font-family: 'Comfortaa', cursive;
-color: black;
-font-weight: 900;
-} */
+.carousel-caption {
+background-color: rgba(0, 0, 0, 0.65);
+max-height: 20%;
+}
 
 .caption:hover {
 color: #f37847;
@@ -218,30 +214,26 @@ color: #f37847;
 .caption {
   color: #90a84d;
   font-family: 'Comfortaa', cursive;
-  font-size: 48px;
-  text-shadow:
-        0.05em 0 black,
-        0 0.05em black,
-        -0.05em 0 black,
-        0 -0.05em black,
-        -0.05em -0.05em black,
-        -0.05em 0.05em black,
-        0.05em -0.05em black,
-        0.05em 0.05em black;
 }
+
 #petname{
   color: white;
   font-family: 'Comfortaa', cursive;
-  font-size: 48px;
-  
+  margin-bottom: 5px;
 }
 
-#petname:hover {
-  color: #90a84d;
+#petname:hover,
+.light-text:hover {
+  color:#f37847;
   }
 
-/* .carousel-caption {
-  position: relative;
-  left: 0;
-  top: 0;
-} */
+#root > div > div > div.App.carousel-container.mt-2 > div > div.carousel-inner > div.active.carousel-item > div > div {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: -20px;
+}
+
+#root > div > div > div.App.carousel-container.mt-2 > div > div.carousel-indicators {
+ margin-bottom: 0;
+}
+

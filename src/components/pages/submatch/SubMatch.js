@@ -21,17 +21,17 @@ render () {
 
         return (
   
-            <div className="App">
-              <h2>Do we have a match for you!</h2>
+            <div className="App carousel-container mt-2">
+              <h2 className="mb-3">Do we have a match for you!</h2>
               <Carousel interval={null}>
 
               {this.props.animals.animals.map(animal =>(
                 <Carousel.Item>
-                <div> 
+                <div className="img-caption-container"> 
                 <img id="matches" src={animal.primary_photo_cropped ? `https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/${animal.id}/1/?bust=1546042081&width=600` : camera} alt="Camera Shy"></img>
                 <Carousel.Caption className="caption">
-                <a href={animal.url}><h1 id="petname" key={animal.name}>{animal.name}</h1>
-                <h2>{animal.age}</h2></a>
+                <a href={animal.url}><h3 id="petname" key={animal.name}>{animal.name}</h3>
+                <p className="light-text">{animal.age}</p></a>
                 </Carousel.Caption>
                 </div>
                 </Carousel.Item>
