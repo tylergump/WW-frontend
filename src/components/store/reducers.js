@@ -1,9 +1,9 @@
 import * as actionType from './action-types'
 
 const initialState = {
-    username: "Human",
-    email: "human@notalien.com",
-    zipcode: 43271,
+    username: "",
+    email: "",
+    zipcode: "",
     authenticated: false,
     preferences: [{type: "Dog", age: "Baby"}]
 }
