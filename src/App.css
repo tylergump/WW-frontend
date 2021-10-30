@@ -24,7 +24,8 @@ h3 {
   width: 600px;
   height: 600px;
   border-width: 10px;
-  border: solid black
+  border: solid black;
+  /* opacity: 0.8; */
 }
 
 form {
@@ -198,22 +199,36 @@ font-weight: 900;
 } */
 
 .caption:hover {
-color: #90a84d;
+color: #f37847;
 }
 
-/* .caption {
+.caption {
+  color: #90a84d;
   font-family: 'Comfortaa', cursive;
-  color: black;
   font-size: 48px;
+  text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
 }
 #name{
+  color: white;
   font-family: 'Comfortaa', cursive;
-  color: black;
   font-size: 48px;
-} */
+  
+}
 
-.carousel-caption {
+#name:hover {
+  color: #90a84d;
+  }
+
+/* .carousel-caption {
   position: relative;
   left: 0;
   top: 0;
-}
+} */

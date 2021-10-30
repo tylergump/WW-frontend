@@ -16,6 +16,11 @@ export default class PrefForm extends Component {
           age:'',
           gender:'',
           size:'',
+          good_with_children:'',
+          good_with_dogs:'',
+          good_with_cats:'',
+          house_trained:'',
+          special_needs:'',
           animals: [
             {animals:  []
           
@@ -57,7 +62,7 @@ export default class PrefForm extends Component {
       
           // Return a second API call
           // This one uses the token we received for authentication
-          return fetch(`https://api.petfinder.com/v2/animals?types=${type.value}&age=${age.value}&gender=${gender.value}&size${size}`, {
+          return fetch(`https://api.petfinder.com/v2/animals?types=${type.value}&age=${age.value}&gender=${gender.value}&size=${size.value}&limit=40`, {
               headers: {
                   'Authorization': data.token_type + ' ' + data.access_token,
                   'Content-Type': 'application/x-www-form-urlencoded'
