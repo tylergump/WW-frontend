@@ -10,16 +10,23 @@ function mapDispatchToProps(dispatch) {
     }
   }
 
+  const mapStateToProps = state => {
+    return {
+        username: state.username,
+        email: state.email,
+        zipcode: state.zipcode
+    }
+  }
+
   class ConnectedEditUser extends Component {
     constructor (props) {
         super(props)
 
         this.state = {
-            
-            username: "",
-            password: "",
-            email: "",
-            zipcode: "",
+            username: this.props.username,
+            email: this.props.email,
+            zipcode: this.props.zipcode,
+            password: "******",
             preferences: [],
             redirect: null
         }
@@ -116,25 +123,32 @@ function mapDispatchToProps(dispatch) {
        
       }
 
+      onChange = (e) => {
+        this.setState({[e.target.name]: e.target.value})
+      }
+
+     
+
     render() {
       if (this.state.redirect) {
       return <Redirect to={this.state.redirect} />
       }
+     
         return (
             <React.Fragment>
              <strong id="UserForm">Edit Account</strong><br/>
               <form onSubmit={this.onSubmit}>
                   <label htmlFor="name">Username: </label> 
-                  <input type="text" id="name" name="username" />
+                  <input type="text" id="name" name="username"  value={this.state.username} onChange={(value) => this.onChange(value)}/>
                   <br/>
                   <label htmlFor="name">Password: </label>
-                  <input type="password" id="password" name="password"/>
+                  <input type="password" id="password" name="password" value={this.state.password} onChange={(value) => this.onChange(value)}/>
                   <br/>
                   <label htmlFor="name">Email: </label>
-                  <input type="text" id="email" name="email"/>
+                  <input type="text" id="email" name="email" value={this.state.email} onChange={(value) => this.onChange(value)}/>
                   <br/>
                   <label htmlFor="name">Zip Code: </label>
-                  <input id="zipcode" name="zipcode" type="number" pattern="[0-9]*"></input>
+                  <input id="zipcode" name="zipcode" type="number" pattern="[0-9]*" value={this.state.zipcode} onChange={(value) => this.onChange(value)}></input>
                   <br/>
                   {/* <label htmlFor="name">Preferences: </label>
                   <input type="checkbox" id="preferences" name="preferences"
@@ -150,6 +164,6 @@ function mapDispatchToProps(dispatch) {
 
 
 
-const UserUpdate = connect(null, mapDispatchToProps)(ConnectedEditUser)
+const UserUpdate = connect(mapStateToProps, mapDispatchToProps)(ConnectedEditUser)
 
 export default UserUpdate
