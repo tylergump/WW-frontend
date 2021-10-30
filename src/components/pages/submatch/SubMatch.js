@@ -22,7 +22,7 @@ render () {
  console.log(this.props.animals)
       
  if (!this.props.animals.animals) {
-    return <div>Searching for Matches...</div>
+    return <div></div>
   } else {
 
         return (
