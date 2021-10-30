@@ -73,7 +73,7 @@ export default class PrefForm extends Component {
       
           // Return a second API call
           // This one uses the token we received for authentication
-          return fetch(`https://api.petfinder.com/v2/animals?type/${type.value}&age=${age.value}&gender=${gender.value}&size=${size.value}&good_with_children=${children}&good_with_dogs=${dogs}&good_with_cats=${cats}&house_trained=${housetrained}&special_needs=${needs}&limit=40`, {
+          return fetch(`https://api.petfinder.com/v2/animals?type=${type.value}&age=${age.value}&gender=${gender.value}&size=${size.value}&good_with_children=${children}&good_with_dogs=${dogs}&good_with_cats=${cats}&house_trained=${housetrained}&special_needs=${needs}&limit=40`, {
               headers: {
                   'Authorization': data.token_type + ' ' + data.access_token,
                   'Content-Type': 'application/x-www-form-urlencoded'
