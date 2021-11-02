@@ -110,9 +110,10 @@ function mapDispatchToProps(dispatch) {
         username: this.state.username,
         email: this.state.email,
         zipcode: this.state.zipcode,
-        password: this.state.password
+        // password: this.state.password
       })
-      .then(response => this.setState({ 
+      .then(response => 
+        this.setState({ 
         username: response.data.username, 
         email: response.data.email,
         zipcode: response.data.zipcode}))
@@ -126,8 +127,8 @@ function mapDispatchToProps(dispatch) {
 
         // ----> if you figure why its not updating the user info, uncomment:
 
-        // this.props.updateUser(this.state)
-        // this.setState({redirect: '/account'})
+        this.props.updateUser(this.state)
+        this.setState({redirect: '/account'})
 
         // -------> these update the frontend user info & redirect back to the account page, it is set to display what the user input in the text fields, not a new get request, so it will display the correct data no matter what
 
