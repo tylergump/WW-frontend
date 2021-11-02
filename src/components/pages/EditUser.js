@@ -89,47 +89,47 @@ function mapDispatchToProps(dispatch) {
 
       // ------- 500 error ---------
 
-      const response = await axios({
-        method: 'put',
-        url: `${process.env.REACT_APP_BASE_URL}/users/update/${this.state.id}`,
-        data: {
-          username: this.state.username,
-          email: this.state.email,
-          zipcode: this.state.zipcode,
-          password: this.state.password
-        }
-     }).catch(err => {
-        console.log(err);
-     });
+    //   const response = await axios({
+    //     method: 'put',
+    //     url: `${process.env.REACT_APP_BASE_URL}/users/update/${this.state.id}`,
+    //     data: {
+    //       username: this.state.username,
+    //       email: this.state.email,
+    //       zipcode: this.state.zipcode,
+    //       password: this.state.password
+    //     }
+    //  }).catch(err => {
+    //     console.log(err);
+    //  });
 
-     console.log(response)
+    //  console.log(response)
 
-     // ------   500 error   ------
+     // ------   works now, but all   ------
 
-    //  const response = await axios.put(`${process.env.REACT_APP_BASE_URL}/users/update/${this.state.id}`, {
-    //     username: this.state.username,
-    //     email: this.state.email,
-    //     zipcode: this.state.zipcode,
-    //     password: this.state.password
-    //   })
-    //   .then(response => this.setState({ 
-    //     username: response.data.username, 
-    //     email: response.data.email,
-    //     zipcode: response.data.zipcode}))
-    //         .catch(error => {
-    //             console.error('There was an error!', error);
-    //         });
+     const response = await axios.put(`${process.env.REACT_APP_BASE_URL}/users/update/${this.state.id}`, {
+        username: this.state.username,
+        email: this.state.email,
+        zipcode: this.state.zipcode,
+        password: this.state.password
+      })
+      .then(response => this.setState({ 
+        username: response.data.username, 
+        email: response.data.email,
+        zipcode: response.data.zipcode}))
+            .catch(error => {
+              console.error('There was an error!', error);
+            });
      
-    //   console.log(response)
+      console.log(response)
 
     //----------------------------------------//
 
-        // ----> if you figure the 500 error out, uncomment:
+        // ----> if you figure why its not updating the user info, uncomment:
 
         // this.props.updateUser(this.state)
         // this.setState({redirect: '/account'})
 
-        // -------> these update the frontend user info & redirect back to the account page
+        // -------> these update the frontend user info & redirect back to the account page, it is set to display what the user input in the text fields, not a new get request, so it will display the correct data no matter what
 
         //--------------------------------------//
        
