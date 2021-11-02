@@ -56,9 +56,9 @@ const mapStateToProps = state => {
         <tr>
           <td><strong>Username:</strong> {username}</td>
         </tr>
-        <tr>
+        {/* <tr>
           <td><strong>Password:</strong> Password Secure</td>
-        </tr>
+        </tr> */}
         <tr>
           <td><strong>Email:</strong> {email}</td>
         </tr>
