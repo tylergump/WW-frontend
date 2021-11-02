@@ -87,10 +87,10 @@ function mapDispatchToProps(dispatch) {
       e.preventDefault()
       console.log('submit user update line 88', this.state)
 
-      // ------- 404 error ---------
+      // ------- 500 error ---------
 
       const response = await axios({
-        method: 'post',
+        method: 'put',
         url: `${process.env.REACT_APP_BASE_URL}/users/update/${this.state.id}`,
         data: {
           username: this.state.username,
@@ -122,10 +122,16 @@ function mapDispatchToProps(dispatch) {
      
     //   console.log(response)
 
-        // ----> if you figure this out, add:
+    //----------------------------------------//
+
+        // ----> if you figure the 500 error out, uncomment:
 
         // this.props.updateUser(this.state)
         // this.setState({redirect: '/account'})
+
+        // -------> these update the frontend user info & redirect back to the account page
+
+        //--------------------------------------//
        
       }
 
