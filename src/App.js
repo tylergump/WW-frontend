@@ -7,7 +7,7 @@ import Home from './components/pages/Home'
 import Login from './components/pages/Login'
 import Register from './components/pages/Register'
 import Matches from './components/pages/Matches'
-import UpdateUser from './components/pages/UpdateUser'
+import Account from './components/pages/Account'
 import EditUser from './components/pages/EditUser'
 import DeleteUser from './components/pages/DeleteUser'
 
@@ -27,7 +27,7 @@ render () {
                 <Route path='/login' component={Login}></Route>
                 <Route path='/register' component={Register}></Route>
                 <Route path='/matches' component={Matches}></Route>
-                <Route path='/account' component={UpdateUser}></Route>
+                <Route path='/account' component={Account}></Route>
                 <Route path='/edit' component={EditUser}></Route>
                 <Route path='/delete' component={DeleteUser}></Route>
               </Switch>

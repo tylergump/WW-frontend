@@ -19,7 +19,7 @@ export function rootReducer(state=initialState, action) {
             case actionType.UPDATE_USER: 
             return {
             ...state,
-            id: payload._id,
+            id: payload.id,
             username: payload.username,
             email: payload.email,
             zipcode: payload.zipcode,
